@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Portfólio - Paulo Ricardo</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" type="image/x-icon" href="assets/icon.ico" />
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="#">Meu Site</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="menu">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
+              <li class="nav-item"><a class="nav-link" href="#projetos">Projetos</a></li>
+              <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    <div class="">
+        <!-- Sobre Mim -->
+        <section id="sobre" class="my-5">
+            <div class="row">
+                <div class="col-md-4">
+                    <img src="sua-imagem.jpg" class="img-fluid rounded-circle" alt="Sua Imagem">
+                </div>
+                <div class="col-md-8">
+                    <h2>Sobre Mim</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi minima dolore sint, repudiandae quod beatae illo corrupti alias placeat iure aperiam repellendus eaque iste incidunt cum? Autem debitis optio omnis.</p>
+                </div>
+            </div>
+        </section>
+        <!-- Projetos -->
+        <section id="projetos" class="my-5">
+            <h2 class="text-center">Projetos</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <img src="img/blog.png" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Blog - Receitas do Lar</h5>
+                            <p class="card-text">Blog de receitas caseiras práticas e saborosas, trazendo pratos tradicionais e inovadores para tornar a culinária do dia a dia mais simples e especial.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <img src="img/loja.jpg" class="card-img-top">
+                            <h5 class="card-title">Sistema de Gerenciamento de loja online</h5>
+                            <p class="card-text">Neste projeto gerenciaremos os produtos de lojas online, como preço, promoção, inventario da loja, pedidos, dados dos clientes.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <div class="container mt-5"> 
+        <div class="row justify-content-center"> 
+            <div class="col-md-8 col-lg-6">  
+                <h2 class="text-center mb-4">Entre em Contato</h2>  
+                <div id="success-message" class="alert alert-success d-none"> 
+                    Sua mensagem foi enviada com sucesso! 🎉
+                </div>
+                <form id="contact-form">
+                    <div class="mb-3">
+                        <label class="form-label">Nome</label>
+                        <input type="text" class="form-control" id="name" placeholder="Seu nome" required>    
+                    </div>
+                        <div class="mb-3">
+                            <label class="form-label">E-mail</label>
+                            <input type="email" class="form-control" id="email" placeholder="seuemail@exemplo.com" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Mensagem</label>
+                            <textarea class="form-control" id="message" rows="4" placeholder="Digite sua mensagem" required></textarea> 
+                        </div>
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-primary btn-lg">Enviar Mensagem</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa6cP0I5yZj6t5kaFQJQ6h6gD" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy1xV+2xZZxS5x0h6g2bJp9a1w5n3e5f5p7x5x5" crossorigin="anonymous"></script>
+    <script>
+    document.getElementById("contact-form").addEventListener("submit", function(event) {
+        event.preventDefault();
+        document.getElementById("success-message").classList.remove("d-none");
+        document.getElementById("contact-form").reset();
+    });
+    </script>
+  </body>
+</html>
