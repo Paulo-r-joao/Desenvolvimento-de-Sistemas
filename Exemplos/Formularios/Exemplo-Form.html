@@ -7,7 +7,6 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-
     <!-- Container principal que define a largura máxima do conteúdo e adiciona um espaçamento superior -->
 <div class="container mt-5"> 
     <!-- Linha flexível que centraliza os elementos horizontalmente -->
@@ -38,21 +37,32 @@
                     <!-- form-control: estiliza o input para preencher a largura da coluna -->
                 </div>
 
+                <!-- Grupo do campo E-mail -->
                 <div class="mb-3">
                     <label class="form-label">E-mail</label>
                     <input type="email" class="form-control" id="email" placeholder="seuemail@exemplo.com" required>
                 </div>
+
+                <!-- Grupo do campo Mensagem -->
                 <div class="mb-3">
                     <label class="form-label">Mensagem</label>
                     <textarea class="form-control" id="message" rows="4" placeholder="Digite sua mensagem" required></textarea> 
+                    <!-- rows="4": define a altura inicial do campo de texto -->
                 </div>
-                <div class="d-grid">
+                
+                <!-- Botão de envio -->
+                <div class="d-grid"> <!-- d-grid: transforma o botão em bloco ocupando toda a largura -->
                     <button type="submit" class="btn btn-primary btn-lg">Enviar Mensagem</button>
+                    <!-- btn: classe base para botões -->
+                    <!-- btn-primary: cor azul padrão do Bootstrap -->
+                    <!-- btn-lg: botão grande para melhor usabilidade -->
                 </div>
             </form>
-        </div>
-    </div>
-</div>
+
+        </div> <!-- Fecha col-md-8 col-lg-6 -->
+    </div> <!-- Fecha row -->
+</div> <!-- Fecha container -->
+<!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 <!-- Script para feedback visual -->
@@ -67,5 +77,6 @@ document.getElementById("contact-form").addEventListener("submit", function(even
     document.getElementById("contact-form").reset();
 });
 </script>
+
 </body>
 </html>
