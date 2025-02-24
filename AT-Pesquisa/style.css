@@ -1,0 +1,14 @@
+.card-title {
+    color: #4749ce;
+}
+.card-text {
+    font-size: 1.1em;
+}
+.spinner-border {
+    margin: 0 auto;
+
+}
+#clearButton {
+    display: block;
+    margin: 0 auto;
+}
