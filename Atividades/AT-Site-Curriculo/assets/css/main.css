@@ -22,19 +22,16 @@
   --background-color: #ffffff; /* Background color for the entire website, including individual sections */
   --default-color: #272829; /* Default color used for the majority of the text content across the entire website */
   --heading-color: #050d18; /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #149ddd; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --accent-color: #b64d08; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
   --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
   --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
 }
-
-/* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
 :root {
-  --nav-color: #a8a9b4;  /* The default color of the main navmenu links */
-  --nav-hover-color: #ffffff; /* Applied to main navmenu links when they are hovered over or active */
-  --nav-mobile-background-color: #040b14; /* Used as the background color for mobile navigation menu */
-  --nav-dropdown-background-color: #040b14; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
-  --nav-dropdown-color: #a8a9b4; /* Used for navigation links of the dropdown items in the navigation menu. */
-  --nav-dropdown-hover-color: #ffffff; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+  --color1: #808080;
+  --color2: #606060;
+  --color3: #404040;
+  --color4: #202020;
+  --color5: #000000;
 }
 
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
@@ -44,8 +41,18 @@
   --surface-color: #ffffff;
 }
 
+/* Change the background color of the skills section to gray */
+.skills.section.light-background {
+  background-color: #f0f0f0;
+}
+
+/* Change the background color of the footer to the same gray */
+.footer.light-background {
+  background-color: #f0f0f0;
+}
+
 .dark-background {
-  --background-color: #040b14;
+  --background-color: #404040;
   --default-color: #ffffff;
   --heading-color: #ffffff;
   --surface-color: #151f2b;
@@ -373,6 +380,10 @@ h6 {
   border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
 }
 
+.footer.light-background {
+  background-color: #f0f0f0;
+}
+
 .footer .copyright p {
   margin-bottom: 0;
 }
@@ -608,6 +619,13 @@ section,
   color: var(--accent-color);
 }
 
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.5), rgba(85, 85, 85, 0.5));
+  z-index: 2;
+}
+
 @media (max-width: 768px) {
   .hero h2 {
     font-size: 32px;
@@ -716,6 +734,35 @@ section,
   height: 10px;
   transition: 0.9s;
   background-color: var(--accent-color);
+}
+
+.skills-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.skill-item {
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.skill-item .skill-icon {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 10px;
+  font-size: 48px; /* Ensure the icon size is consistent */
+}
+
+.skill-item h4 {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--heading-color);
+  margin: 0;
 }
 
 /*--------------------------------------------------------------
@@ -892,9 +939,60 @@ section,
 
 .project-img {
   width: 100%;
+  height: 200px; /* Set a fixed height for all project images */
+  object-fit: cover; /* Ensure the images cover the entire area */
+}
+
+.swiper-slide .card {
+  max-width: 250px; /* Set a maximum width for the cards */
+  margin: auto; /* Center the cards */
+}
+
+.project-img {
+  height: 150px; /* Adjust the height of the project images */
+}
+
+.project-item .card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.project-item .card:hover {
+  transform: translateY(-10px);
+}
+
+.project-item .card-img {
+  overflow: hidden;
+  border-bottom: 1px solid #ddd;
+}
+
+.project-item .card-img img {
+  width: 100%;
   height: auto;
-  max-height: 200px;
-  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.project-item .card:hover .card-img img {
+  transform: scale(1.1);
+}
+
+.project-item .card-info {
+  padding: 15px;
+  text-align: center;
+}
+
+.project-item .card-info h4 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.project-item .card-info p {
+  font-size: 14px;
+  color: #666;
 }
 
 /*--------------------------------------------------------------
@@ -1045,6 +1143,11 @@ section,
 
 .testimonials .swiper-pagination .swiper-pagination-bullet-active {
   background-color: var(--accent-color);
+}
+
+.swiper-slide {
+  padding: 0 15px; /* Add spacing between the cards */
+  margin-bottom: 30px; /* Add space below the cards */
 }
 
 /*--------------------------------------------------------------
@@ -1277,6 +1380,69 @@ section,
 /*--------------------------------------------------------------
 # Starter Section Section
 --------------------------------------------------------------*/
-.starter-section {
+/*.starter-section {
   /* Add your styles here */
+
+/*--------------------------------------------------------------
+# Projects Section
+--------------------------------------------------------------*/
+.projects {
+  background-color: var(--background-color); /* Ensure the projects section has the same background color as the skills section */
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+.card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.card-img {
+  overflow: hidden;
+  border-bottom: 1px solid #ddd;
+}
+
+.card-img img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.card:hover .card-img img {
+  transform: scale(1.1);
+}
+
+.card-info {
+  padding: 15px;
+  text-align: center;
+}
+
+.card-info h4 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.card-info p {
+  font-size: 14px;
+  color: #666;
+}
+
+/* Hover Effects */
+.card:hover .card-info {
+  background: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  transition: background 0.3s ease;
+}
+
+.card:hover .card-info h4,
+.card:hover .card-info p {
+  color: #fff;
 }
