@@ -7,41 +7,35 @@
 
 /* Global Colors */
 :root { 
-  --background-color: #ffffff;
-  --default-color: #272829;
-  --heading-color: #050d18;
-  --accent-color: #b64d08;
-  --surface-color: #ffffff;
-  --contrast-color: #ffffff;
+  --background-color: #f8f9fa; /* Light background color */
+  --default-color: #212529; /* Dark text color */
+  --heading-color: #343a40; /* Darker heading color */
+  --accent-color: #b64d08; /* Primary blue accent color */
+  --surface-color: #ffffff; /* White surface color */
+  --contrast-color: #ffffff; /* White contrast color */
 }
+
 :root {
-  --color1: #808080;
-  --color2: #606060;
-  --color3: #404040;
-  --color4: #202020;
-  --color5: #000000;
+  --nav-color: #c5c5c5;  /* Dark gray nav link color */
+  --nav-hover-color: #b64d08; /* Blue hover color */
+  --nav-mobile-background-color: #343a40; /* Dark background for mobile nav */
+  --nav-dropdown-background-color: #343a40; /* Dark background for dropdown */
+  --nav-dropdown-color: #adb5bd; /* Light gray dropdown link color */
+  --nav-dropdown-hover-color: #b64d08; /* Blue dropdown hover color */
 }
 
 /* Color Presets */
 .light-background {
-  --background-color: #f4fafd;
-  --surface-color: #ffffff;
-}
-
-.skills.section.light-background {
-  background-color: #f0f0f0;
-}
-
-.footer.light-background {
-  background-color: #f0f0f0;
+  --background-color: #d6d6d6; /* Light background color */
+  --surface-color: #ffffff; /* White surface color */
 }
 
 .dark-background {
-  --background-color: #404040;
-  --default-color: #ffffff;
-  --heading-color: #ffffff;
-  --surface-color: #151f2b;
-  --contrast-color: #ffffff;
+  --background-color: #343a40; /* Dark background color */
+  --default-color: #ffffff; /* White text color */
+  --heading-color: #ffffff; /* White heading color */
+  --surface-color: #495057; /* Dark gray surface color */
+  --contrast-color: #ffffff; /* White contrast color */
 }
 
 /* Smooth scroll */
@@ -357,7 +351,7 @@ h6 {
 }
 
 .footer.light-background {
-  background-color: #f0f0f0;
+  background-color: #e9ecef;
 }
 
 .footer .copyright p {
