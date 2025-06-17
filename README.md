@@ -6,7 +6,7 @@ falhas comuns como estouro de valores e entradas inválidas.
 
 Para poder executar e codificar as dentro da página webp e automatiza, é nescessário puxar a biblioteca do selenium:
 
-    ```python
+ ```bash
 # webdriver permite controlar navegadores
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
@@ -17,6 +17,5 @@ from selenium.webdriver.support import expected_conditions as EC
 from webdriver_manager.chrome import ChromeDriverManager
 import time
 import random
-
-    ```
+```
 Com isso, código tem ligação com navegador
